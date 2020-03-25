@@ -43,5 +43,9 @@ class ShoppingCart
     ((percent / @capacity) * 100).round(2)
   end
 
+  def sorted_products_by_quantity
+    @products.sort_by {|product| product.quantity}
+  end
+
 
 end
