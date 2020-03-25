@@ -6,6 +6,7 @@ class ShoppingCart
     @capacity = capacity
     @products = []
     @is_full = false
+    @details = {name: @name, capacity: @capacity}
   end
 
   def add_product(product)
@@ -26,6 +27,10 @@ class ShoppingCart
     else
       false
     end
+  end
+
+  def details
+    @details
   end
 
 

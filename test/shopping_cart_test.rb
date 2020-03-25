@@ -51,4 +51,10 @@ class ShoppingCartTest < Minitest::Test
     assert_equal true, cart.is_full?
   end
 
+  def test_details
+    cart = ShoppingCart.new("King Soopers", 30)
+    assert_instance_of Hash, cart.details
+    assert_equal "King Soopers", cart.details[:name]
+  end
+
 end
