@@ -9,6 +9,6 @@ class Product
   end
 
   def total_price
-    @unit_price * @quantity
+    @unit_price * @quantity.to_f
   end
 end
