@@ -33,5 +33,15 @@ class ShoppingCart
     @details
   end
 
+  def percentage_occupied
+    percent = 0
+
+    @products.each do |product|
+      percent += product.quantity
+    end
+
+    ((percent / @capacity) * 100).round(2)
+  end
+
 
 end
