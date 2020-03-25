@@ -5,13 +5,13 @@ class Product
     @category = category
     @name = name
     @unit_price = unit_price
-    @quantity = quantity
+    @quantity = quantity.to_f
+  end
     @hoarded = false
   end
 
   def total_price
-    @unit_price * @quantity.to_f
-  end
+    @unit_price * @quantity
 
   def hoard
     @hoarded = true
