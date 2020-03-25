@@ -3,7 +3,7 @@ class ShoppingCart
 
   def initialize(name, capacity)
     @name = name
-    @capacity = capacity
+    @capacity = capacity[0..1].to_i
     @products = []
     @is_full = false
     @details = {name: @name, capacity: @capacity}
